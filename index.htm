@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nexora — Build, launch and scale your digital product faster</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link href="src/output.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        display: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        ink: '#0b1437',
+                        brand: { DEFAULT: '#2563eb', dark: '#1d4ed8', violet: '#6d3fc7' },
+                        soft: '#f7f8fc',
+                    },
+                    boxShadow: {
+                        glow: '0 10px 25px -8px rgba(37,99,235,.55)',
+                        card: '0 20px 50px -20px rgba(15,23,80,.25)',
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .btn-grad {
+            background-image: linear-gradient(90deg, #2563eb, #6d3fc7);
+        }
+
+        .text-muted {
+            color: #5b6275;
+        }
+    </style>
+</head>
+
+<body class="font-sans text-ink bg-white antialiased">
+
+    <header id="header" class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
+        <div class="mx-auto flex h-[88px] max-w-[1320px] items-center justify-between px-6 lg:px-0">
+            <a href="#home" class="font-display text-[28px] font-extrabold tracking-tight text-ink">Nexora<span
+                    class="text-brand">.</span></a>
+
+            <nav class="hidden items-center gap-1 lg:flex">
+                <a href="#home"
+                    class="rounded-lg bg-brand/10 px-5 py-2.5 font-display text-[16px] font-semibold text-ink">Home</a>
+                <a href="#about"
+                    class="rounded-lg px-5 py-2.5 font-display text-[16px] font-semibold text-[#8a6f73] transition hover:text-ink">About</a>
+                <a href="#services"
+                    class="rounded-lg px-5 py-2.5 font-display text-[16px] font-semibold text-[#8a6f73] transition hover:text-ink">Services</a>
+                <a href="#portfolio"
+                    class="rounded-lg px-5 py-2.5 font-display text-[16px] font-semibold text-[#8a6f73] transition hover:text-ink">Portfolio</a>
+                <a href="#blog"
+                    class="rounded-lg px-5 py-2.5 font-display text-[16px] font-semibold text-[#8a6f73] transition hover:text-ink">Blog</a>
+                <a href="#pricing"
+                    class="rounded-lg px-5 py-2.5 font-display text-[16px] font-semibold text-[#8a6f73] transition hover:text-ink">Pricing</a>
+                <a href="#contact"
+                    class="rounded-lg px-5 py-2.5 font-display text-[16px] font-semibold text-[#8a6f73] transition hover:text-ink">Contact</a>
+                <a href="#contact"
+                    class="btn-grad ml-3 rounded-lg px-6 py-3 font-display text-[16px] font-bold text-white shadow-glow transition hover:-translate-y-0.5">Get
+                    Started</a>
+            </nav>
+            <button id="butn"></button>
+            <button id="menuBtn" class="rounded-lg p-2 lg:hidden" aria-label="Menu">
+                <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16" />
+                </svg>
+            </button>
+        </div>
+
+        <div id="mobileMenu" class="hidden border-t border-slate-100 bg-white px-6 pb-6 pt-2 shadow-lg lg:hidden">
+            <a href="#home" class="block py-3 font-display font-semibold">Home</a>
+            <a href="#about" class="block py-3 font-display font-semibold text-[#8a6f73]">About</a>
+            <a href="#services" class="block py-3 font-display font-semibold text-[#8a6f73]">Services</a>
+            <a href="#portfolio" class="block py-3 font-display font-semibold text-[#8a6f73]">Portfolio</a>
+            <a href="#blog" class="block py-3 font-display font-semibold text-[#8a6f73]">Blog</a>
+            <a href="#pricing" class="block py-3 font-display font-semibold text-[#8a6f73]">Pricing</a>
+            <a href="#contact" class="block py-3 font-display font-semibold text-[#8a6f73]">Contact</a>
+            <a href="#contact"
+                class="btn-grad mt-3 block rounded-lg px-6 py-3 text-center font-display font-bold text-white">Get
+                Started</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="home"
+            class="relative overflow-hidden bg-gradient-to-br from-[#eef1ff] via-[#f1f2ff] to-[#f5f3ff] pt-[88px]">
+            <div
+                class="pointer-events-none absolute -right-40 -top-40 h-[560px] w-[560px] rounded-full bg-violet-300/30 blur-2xl">
+            </div>
+            <div
+                class="pointer-events-none absolute -bottom-40 -left-32 h-[420px] w-[420px] rounded-full bg-blue-300/30 blur-3xl">
+            </div>
+
+            <div
+                class="relative mx-auto grid max-w-[1320px] items-center gap-12 px-6 py-20 lg:grid-cols-2 lg:px-0 lg:py-28">
+                <div>
+                    <p
+                        class="mb-5 flex items-center gap-2 pl-5 font-display text-[14px] font-bold uppercase tracking-[0.12em] text-brand">
+                        <span class="h-1.5 w-1.5 rounded-full bg-brand"></span> Trusted by 480+ growing companies
+                    </p>
+                    <h1
+                        class="font-display text-5xl font-extrabold leading-[1.08] tracking-tight text-ink sm:text-6xl lg:text-[72px]">
+                        Build, launch and scale your <span class="text-brand">digital product</span> faster.
+                    </h1>
+                    <p class="mt-8 max-w-[660px] text-[21px] leading-[1.75] text-muted">
+                        Nexora is your end-to-end product partner — strategy, design and engineering teams that ship
+                        measurable results for SaaS and tech-driven businesses.
+                    </p>
+                    <div class="mt-10 flex flex-wrap gap-4">
+                        <a href="#contact"
+                            class="btn-grad inline-flex items-center gap-2 rounded-lg px-9 py-5 font-display text-[18px] font-bold text-white shadow-glow transition hover:-translate-y-0.5">
+                            Start a Project
+                            <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6" />
+                            </svg>
+                        </a>
+                        <a id="secb" href="#services"
+                            class="inline-flex items-center rounded-lg border border-slate-200 bg-white px-9 py-5 font-display text-[18px] font-bold text-ink transition hover:-translate-y-0.5 hover:shadow-card">Explore
+                            Services</a>
+                    </div>
+                    <div class="mt-8 flex items-center gap-4">
+                        <div class="flex -space-x-3">
+                            <span
+                                class="grid h-11 w-11 place-items-center rounded-full border-2 border-white bg-slate-800 text-xs font-bold text-white">AK</span>
+                            <span
+                                class="grid h-11 w-11 place-items-center rounded-full border-2 border-white bg-amber-500 text-xs font-bold text-white">LM</span>
+                            <span
+                                class="grid h-11 w-11 place-items-center rounded-full border-2 border-white bg-rose-400 text-xs font-bold text-white">SR</span>
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-1 text-[13px] text-amber-400">★★★★★ <span
+                                    class="ml-1 text-[17px] font-semibold text-ink">4.9/5</span></div>
+                            <p class="text-[17px] text-muted">from 320+ client reviews</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dashboard mock -->
+                <div class="relative mx-auto w-full max-w-[620px] lg:ml-auto">
+                    <div id="dashboard" class="relative rounded-[28px] bg-white p-8 shadow-card">
+                        <div class="flex justify-end">
+                            <span
+                                class="rounded-full bg-blue-50 px-4 py-2 text-[14px] font-semibold text-brand">Live</span>
+                        </div>
+                        <div class="mt-3 space-y-3">
+                            <div class="h-3 w-[88%] rounded-full bg-indigo-100"></div>
+                            <div class="h-3 w-[55%] rounded-full bg-indigo-100"></div>
+                        </div>
+                        <div class="mt-10 grid grid-cols-2 gap-4">
+                            <div class="rounded-2xl bg-blue-50/70 p-5">
+                                <svg class="h-8 w-8 text-brand" fill="none" stroke="currentColor" stroke-width="1.6"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M3 3v18h18M7 15l4-4 3 3 6-6m0 0h-4m4 0v4" />
+                                </svg>
+                                <p class="mt-5 font-display text-[20px] font-bold">+148%</p>
+                                <p class="text-[17px] text-muted">Conversions</p>
+                            </div>
+                            <div class="rounded-2xl p-5">
+                                <svg class="h-8 w-8 text-violet-600" fill="none" stroke="currentColor"
+                                    stroke-width="1.6" viewBox="0 0 24 24">
+                                    <circle cx="9" cy="8" r="3.5" />
+                                    <circle cx="17" cy="9" r="2.5" />
+                                    <path stroke-linecap="round"
+                                        d="M2.5 20c.4-3.5 3-5.5 6.5-5.5s6.1 2 6.5 5.5M16 14.5c3 0 5 1.6 5.5 4.5" />
+                                </svg>
+                                <p class="mt-5 font-display text-[20px] font-bold">12.4k</p>
+                                <p class="text-[17px] text-muted">Active Users</p>
+                            </div>
+                        </div>
+                        <div class="mt-6 h-24 rounded-2xl bg-blue-50/70"></div>
+                    </div>
+
+                    <!-- floating: delivered -->
+                    <div
+                        class="absolute -left-6 -top-8 flex items-center gap-4 rounded-2xl bg-white px-6 py-4 shadow-card sm:-left-16">
+                        <span class="grid h-12 w-12 place-items-center rounded-xl bg-emerald-50 text-emerald-500">
+                            <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2.2"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m5 13 4 4L19 7" />
+                            </svg>
+                        </span>
+                        <div>
+                            <p class="font-display text-[19px] font-bold leading-tight">Project Delivered</p>
+                            <p class="text-[16px] text-muted">On time, every time</p>
+                        </div>
+                    </div>
+
+                    <!-- floating: ROI -->
+                    <div
+                        class="absolute -bottom-8 -right-2 flex items-center gap-4 rounded-2xl px-6 py-4 shadow-card sm:-right-6">
+                        <span class="grid h-12 w-12 place-items-center rounded-xl bg-blue-50 text-brand">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" />
+                            </svg>
+                        </span>
+                        <div>
+                            <p class="font-display text-[19px] font-bold leading-tight">Avg. 3.2x ROI</p>
+                            <p class="text-[16px] text-muted">within 6 months</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="power" class="border-y border-slate-200 bg-white py-10">
+            <p class="text-center font-display text-[15px] font-semibold uppercase tracking-[0.15em] text-muted">
+                Powering product teams at</p>
+            <div
+                class="mx-auto mt-8 grid max-w-[1320px] grid-cols-2 items-center gap-8 px-6 font-display text-[26px] font-bold text-slate-300 sm:grid-cols-3 lg:grid-cols-6 lg:px-0">
+                <div class="flex items-center justify-center gap-2"><svg class="h-6 w-6" viewBox="0 0 24 24"
+                        fill="currentColor">
+                        <path d="M12 2 21 7v10l-9 5-9-5V7z" />
+                    </svg>Flowbit</div>
+                <div class="flex items-center justify-center gap-2"><span
+                        class="h-6 w-6 rounded-full bg-slate-300"></span>Orbiq</div>
+                <div class="flex items-center justify-center gap-2"><svg class="h-6 w-6" viewBox="0 0 24 24"
+                        fill="currentColor">
+                        <path d="M12 3 22 20H2z" />
+                    </svg>Verta</div>
+                <div class="flex items-center justify-center gap-2"><span
+                        class="h-6 w-6 rounded-md bg-slate-300"></span>Cloudra</div>
+                <div class="flex items-center justify-center gap-2"><svg class="h-6 w-6" fill="none"
+                        stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M6 3h12l4 6-10 12L2 9z" />
+                    </svg>Pivotal</div>
+                <div class="flex items-center justify-center gap-2"><svg class="h-6 w-6" viewBox="0 0 24 24"
+                        fill="currentColor">
+                        <path d="m12 1 11 11-11 11L1 12z" />
+                    </svg>Northpeak</div>
+            </div>
+        </section>
+
+        <section id="services" class="bg-soft py-24">
+            <div class="mx-auto max-w-[1320px] px-6 lg:px-0">
+                <div class="flex flex-wrap items-end justify-between gap-6">
+                    <div>
+                        <span id="what"
+                            class="inline-flex items-center gap-2 rounded-full bg-blue-50 px-5 py-2 font-display text-[14px] font-bold uppercase tracking-[0.12em] text-brand"><i
+                                class="h-1.5 w-1.5 rounded-full bg-brand"></i>What we do</span>
+                        <h2 class="mt-6 font-display text-4xl font-extrabold tracking-tight sm:text-[44px]">Capabilities
+                            built for modern product teams</h2>
+                        <p class="mt-5 max-w-[740px] text-[19px] leading-8 text-muted">From early-stage validation to
+                            scaling infrastructure, our specialists plug directly into your roadmap.</p>
+                    </div>
+                    <a href="#services"
+                        class="inline-flex items-center gap-2 font-display text-[17px] font-bold text-brand hover:underline">View
+                        all services
+                        <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6" />
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                    <!-- card -->
+                    <article
+                        class="group rounded-3xl border border-slate-100 bg-white p-8 transition duration-300 hover:-translate-y-2 hover:shadow-card">
+                        <span class="grid h-[70px] w-[70px] place-items-center rounded-2xl bg-blue-50 text-brand">
+                            <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.8"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M4 20V14h3v6M10.5 20V9h3v11M17 20V4h3v16M3 20h18" />
+                            </svg>
+                        </span>
+                        <h3 class="mt-7 font-display text-[22px] font-bold">Product Strategy</h3>
+                        <p class="mt-3 text-[17px] leading-8 text-muted">Research-driven roadmaps that align
+                            stakeholders and de-risk what you build next.</p>
+                        <a href="#" class="mt-6 inline-flex items-center gap-2 font-display font-bold text-brand">Learn
+                            more <span class="transition group-hover:translate-x-1">→</span></a>
+                    </article>
+                    <article
+                        class="group rounded-3xl border border-slate-100 bg-white p-8 transition duration-300 hover:-translate-y-2 hover:shadow-card">
+                        <span
+                            class="grid h-[70px] w-[70px] place-items-center rounded-2xl bg-violet-50 text-violet-600">
+                            <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.8"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 3a9 9 0 1 0 0 18c1.4 0 2-1 1.6-2-.5-1.2.3-2.5 1.7-2.5H17a4 4 0 0 0 4-4C21 6.5 17 3 12 3Z" />
+                                <circle cx="7.5" cy="11" r="1" />
+                                <circle cx="10" cy="7.5" r="1" />
+                                <circle cx="14.5" cy="7.5" r="1" />
+                            </svg>
+                        </span>
+                        <h3 class="mt-7 font-display text-[22px] font-bold">UI/UX Design</h3>
+                        <p class="mt-3 text-[17px] leading-8 text-muted">Interfaces that convert — wireframes, design
+                            systems and prototypes ready for dev.</p>
+                        <a href="#" class="mt-6 inline-flex items-center gap-2 font-display font-bold text-brand">Learn
+                            more <span class="transition group-hover:translate-x-1">→</span></a>
+                    </article>
+                    <article
+                        class="group rounded-3xl border border-slate-100 bg-white p-8 transition duration-300 hover:-translate-y-2 hover:shadow-card">
+                        <span
+                            class="grid h-[70px] w-[70px] place-items-center rounded-2xl bg-emerald-50 text-emerald-500">
+                            <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.8"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="m8 8-5 4 5 4M16 8l5 4-5 4M14 5l-4 14" />
+                            </svg>
+                        </span>
+                        <h3 class="mt-7 font-display text-[22px] font-bold">Web Development</h3>
+                        <p class="mt-3 text-[17px] leading-8 text-muted">Performant, scalable web apps built on modern
+                            frameworks with clean architecture.</p>
+                        <a href="#" class="mt-6 inline-flex items-center gap-2 font-display font-bold text-brand">Learn
+                            more <span class="transition group-hover:translate-x-1">→</span></a>
+                    </article>
+                    <article
+                        class="group rounded-3xl border border-slate-100 bg-white p-8 transition duration-300 hover:-translate-y-2 hover:shadow-card">
+                        <span class="grid h-[70px] w-[70px] place-items-center rounded-2xl bg-blue-50 text-brand">
+                            <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.8"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M7 18a4 4 0 0 1-.6-7.96A6 6 0 0 1 18 9.5a4.5 4.5 0 0 1-.5 8.5M12 12v8m0-8-3 3m3-3 3 3" />
+                            </svg>
+                        </span>
+                        <h3 class="mt-7 font-display text-[22px] font-bold">Cloud &amp; DevOps</h3>
+                        <p class="mt-3 text-[17px] leading-8 text-muted">CI/CD pipelines, monitoring and cloud
+                            infrastructure that scales with your traffic.</p>
+                        <a href="#" class="mt-6 inline-flex items-center gap-2 font-display font-bold text-brand">Learn
+                            more <span class="transition group-hover:translate-x-1">→</span></a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="bg-white py-24">
+            <div class="mx-auto grid max-w-[1320px] items-center gap-14 px-6 lg:grid-cols-2 lg:px-0">
+                <div class="relative">
+                    <div class="relative  overflow-hidden rounded-[28px] ">
+                        <img src="img/sec1.jpg" alt="">
+                    </div>
+                    <div
+                        class="absolute -bottom-6 -left-4 flex items-center gap-4 rounded-2xl bg-white px-6 py-4 shadow-card sm:-left-8">
+                        <span class="grid h-12 w-12 place-items-center rounded-xl bg-blue-50 text-brand">
+                            <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8"
+                                viewBox="0 0 24 24">
+                                <circle cx="12" cy="9" r="5" />
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="m9 13.5-1.5 7 4.5-2.5 4.5 2.5-1.5-7" />
+                            </svg>
+                        </span>
+                        <div>
+                            <p class="font-display text-[19px] font-bold leading-tight">Top Rated Agency</p>
+                            <p class="text-[16px] text-muted">Clutch &amp; G2, 2025</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <span id="why"
+                        class="inline-flex items-center gap-2 rounded-full bg-blue-50 px-5 py-2 font-display text-[14px] font-bold uppercase tracking-[0.12em] text-brand"><i
+                            class="h-1.5 w-1.5 rounded-full bg-brand"></i>Why Nexora</span>
+                    <h2 class="mt-6 font-display text-4xl font-extrabold leading-tight tracking-tight sm:text-[44px]">A
+                        senior team, embedded in your workflow</h2>
+                    <p class="mt-6 text-[19px] leading-9 text-muted">We don't hand off decks and disappear. Our
+                        designers and engineers work inside your tools — Slack, Linear, Figma — as an extension of your
+                        team.</p>
+                    <ul class="mt-8 space-y-5 text-[19px] text-muted">
+                        <li class="flex items-start gap-4"><span
+                                class="mt-1 grid h-8 w-8 shrink-0 place-items-center rounded-full bg-blue-50 text-brand"><svg
+                                    class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.5"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m5 12 5 5 9-10" />
+                                </svg></span><span><b class="font-display font-bold text-ink">Dedicated senior squad</b>
+                                — no junior bait-and-switch, ever.</span></li>
+                        <li class="flex items-start gap-4"><span
+                                class="mt-1 grid h-8 w-8 shrink-0 place-items-center rounded-full bg-blue-50 text-brand"><svg
+                                    class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.5"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m5 12 5 5 9-10" />
+                                </svg></span><span><b class="font-display font-bold text-ink">Transparent weekly
+                                    sprints</b> with shared dashboards and demos.</span></li>
+                        <li class="flex items-start gap-4"><span
+                                class="mt-1 grid h-8 w-8 shrink-0 place-items-center rounded-full bg-blue-50 text-brand"><svg
+                                    class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.5"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m5 12 5 5 9-10" />
+                                </svg></span><span><b class="font-display font-bold text-ink">Flexible engagement
+                                    models</b> — project, retainer or staff augmentation.</span></li>
+                    </ul>
+                    <a href="#about"
+                        class="btn-grad mt-10 inline-block rounded-lg px-9 py-5 font-display text-[18px] font-bold text-white shadow-glow transition hover:-translate-y-0.5">More
+                        About Us</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="client" class="border-y border-slate-200 bg-white py-14">
+            <div class="mx-auto grid max-w-[1320px] grid-cols-2 gap-10 px-6 text-center lg:grid-cols-4 lg:px-0">
+                <div>
+                    <p class="font-display text-5xl font-extrabold">480+</p>
+                    <p class="mt-2 text-[18px] text-muted">Projects delivered</p>
+                </div>
+                <div>
+                    <p class="font-display text-5xl font-extrabold">12 yrs</p>
+                    <p class="mt-2 text-[18px] text-muted">Industry experience</p>
+                </div>
+                <div>
+                    <p class="font-display text-5xl font-extrabold">96%</p>
+                    <p class="mt-2 text-[18px] text-muted">Client retention</p>
+                </div>
+                <div>
+                    <p class="font-display text-5xl font-extrabold">34</p>
+                    <p class="mt-2 text-[18px] text-muted">Countries served</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-soft py-24">
+            <div class="mx-auto max-w-[1320px] px-6 lg:px-0">
+                <div class="mx-auto max-w-3xl text-center">
+                    <span id="how"
+                        class="inline-flex items-center gap-2 rounded-full bg-blue-50 px-5 py-2 font-display text-[14px] font-bold uppercase tracking-[0.12em] text-brand"><i
+                            class="h-1.5 w-1.5 rounded-full bg-brand"></i>How we work</span>
+                    <h2 class="mt-6 font-display text-4xl font-extrabold tracking-tight sm:text-[44px]">A proven
+                        four-step delivery process</h2>
+                    <p class="mt-5 text-[19px] leading-8 text-muted">Every engagement follows the same disciplined
+                        process — refined across hundreds of launches.</p>
+                </div>
+                <div class="mt-16 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+                    <div>
+                        <p class="font-display text-[64px] font-extrabold leading-none text-brand">01</p>
+                        <h3 class="mt-5 font-display text-[28px] font-bold text-slate-600">Discover</h3>
+                        <p class="mt-2 text-[17px] leading-8 text-muted">We audit your product, market and users to
+                            identify the highest-leverage opportunities.</p>
+                    </div>
+                    <div>
+                        <p class="font-display text-[64px] font-extrabold leading-none text-brand">02</p>
+                        <h3 class="mt-5 font-display text-[28px] font-bold text-slate-600">Design</h3>
+                        <p class="mt-2 text-[17px] leading-8 text-muted">Wireframes evolve into polished, tested
+                            interfaces backed by a reusable design system.</p>
+                    </div>
+                    <div>
+                        <p class="font-display text-[64px] font-extrabold leading-none text-brand">03</p>
+                        <h3 class="mt-5 font-display text-[28px] font-bold text-slate-600">Build</h3>
+                        <p class="mt-2 text-[17px] leading-8 text-muted">Engineers ship in two-week sprints with
+                            continuous integration and staging previews.</p>
+                    </div>
+                    <div>
+                        <p class="font-display text-[64px] font-extrabold leading-none text-brand">04</p>
+                        <h3 class="mt-5 font-display text-[28px] font-bold text-slate-600">Scale</h3>
+                        <p class="mt-2 text-[17px] leading-8 text-muted">Post-launch, we monitor performance and iterate
+                            based on real usage data.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="bg-white py-24">
+            <div class="mx-auto max-w-[1320px] px-6 lg:px-0">
+                <div class="flex flex-wrap items-end justify-between gap-6">
+                    <div>
+                        <span id="work"
+                            class="inline-flex items-center gap-2 rounded-full bg-blue-50 px-5 py-2 font-display text-[14px] font-bold uppercase tracking-[0.12em] text-brand"><i
+                                class="h-1.5 w-1.5 rounded-full bg-brand"></i>Selected work</span>
+                        <h2 class="mt-6 font-display text-4xl font-extrabold tracking-tight sm:text-[44px]">Case studies
+                            that speak for themselves</h2>
+                    </div>
+                    <a href="#portfolio"
+                        class="inline-flex items-center gap-2 font-display text-[17px] font-bold text-brand hover:underline">View
+                        full portfolio
+                        <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="mt-14 grid gap-8 md:grid-cols-3">
+                    <a href="#" class="group relative block  overflow-hidden rounded-3xl">
+                        <img src="img/sec1.1.jpg">
+                        <div
+                            class="absolute inset-x-0 bottom-0 translate-y-3 p-8 opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                            <p class="text-[17px] text-slate-200">FinTech · Product Design</p>
+                            <h3 class="font-display text-[26px] font-bold text-white">Payflow Dashboard Redesign</h3>
+                        </div>
+                    </a>
+                    <a href="#" class="group relative block overflow-hidden rounded-3xl">
+                        <img src="img/sec1.2.jpg" alt="">
+                        <div
+                            class="absolute inset-x-0 bottom-0 translate-y-3 p-8 opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                            <p class="text-[17px] text-slate-200">SaaS · Web Development</p>
+                            <h3 class="font-display text-[26px] font-bold text-white">Metricly Analytics Platform</h3>
+                        </div>
+                    </a>
+                    <a href="#" class="group relative block overflow-hidden rounded-3xl">
+                        <img src="img/sec1.3.jpg" alt="">
+                        <div
+                            class="absolute inset-x-0 bottom-0 translate-y-3 p-8 opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                            <p class="text-[17px] text-slate-200">HealthTech · Branding</p>
+                            <h3 class="font-display text-[26px] font-bold text-white">Carewise Patient App</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog" class="bg-soft py-24">
+            <div class="mx-auto max-w-[1320px] px-6 lg:px-0">
+                <div class="text-center">
+                    <span id="feed"
+                        class="inline-flex items-center gap-2 rounded-full bg-blue-50 px-5 py-2 font-display text-[14px] font-bold uppercase tracking-[0.12em] text-brand"><i
+                            class="h-1.5 w-1.5 rounded-full bg-brand"></i>Client feedback</span>
+                    <h2 class="mt-6 font-display text-4xl font-extrabold tracking-tight sm:text-[44px]">Don't just take
+                        our word for it</h2>
+                </div>
+                <div class="mt-14 grid gap-8 md:grid-cols-3">
+                    <figure
+                        class="rounded-3xl border border-slate-100 bg-white p-10 transition hover:-translate-y-1 hover:shadow-card">
+                        <div class="text-[17px] tracking-widest text-amber-400">★★★★★</div>
+                        <blockquote class="mt-6 text-[19px] leading-9 text-muted">"Nexora rebuilt our onboarding flow in
+                            six weeks and activation rates jumped almost immediately. Communication was exceptional
+                            throughout."</blockquote>
+                        <figcaption class="mt-8 flex items-center gap-4">
+                            <img class="grid h-14 w-14 place-items-center rounded-full" src="img/sarah.jpg" alt="">
+                            <div>
+                                <p class="font-display text-[19px] font-bold">Sarah Mitchell</p>
+                                <p class="text-[16px] text-muted">VP Product, Flowbit</p>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    <figure
+                        class="rounded-3xl border border-slate-100 bg-white p-10 transition hover:-translate-y-1 hover:shadow-card">
+                        <div class="text-[17px] tracking-widest text-amber-400">★★★★★</div>
+                        <blockquote class="mt-6 text-[19px] leading-9 text-muted">"The team felt like an extension of
+                            ours from day one. They caught edge cases our internal team had missed for months."
+                        </blockquote>
+                        <figcaption class="mt-8 flex items-center gap-4">
+                            <img class="grid h-14 w-14 place-items-center rounded-full" src="img/james.jpg" alt="">
+                            <div>
+                                <p class="font-display text-[19px] font-bold">James Okafor</p>
+                                <p class="text-[16px] text-muted">CTO, Orbiq</p>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    <figure
+                        class="rounded-3xl border border-slate-100 bg-white p-10 transition hover:-translate-y-1 hover:shadow-card">
+                        <div class="text-[17px] tracking-widest text-amber-400">★★★★★</div>
+                        <blockquote class="mt-6 text-[19px] leading-9 text-muted">"Clear timelines, transparent pricing,
+                            and a final product that exceeded what we scoped. We've since signed a long-term retainer."
+                        </blockquote>
+                        <figcaption class="mt-8 flex items-center gap-4">
+                            <img class="grid h-14 w-14 place-items-center rounded-full" src="img/lina.jpg" alt="">
+                            <div>
+                                <p class="font-display text-[19px] font-bold">Lina Torres</p>
+                                <p class="text-[16px] text-muted">Founder, Carewise</p>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="bg-white py-24">
+            <div class="mx-auto max-w-[1320px] px-6 lg:px-0">
+                <div
+                    class="relative overflow-hidden rounded-[28px] bg-gradient-to-br from-[#0e1744] via-[#141d4d] to-[#1c2a6b] px-8 py-16 sm:px-12 lg:px-12">
+                    <div
+                        class="pointer-events-none absolute -right-20 -top-20 h-80 w-80 rounded-full bg-blue-500/25 blur-3xl">
+                    </div>
+                    <div class="relative flex flex-wrap items-center justify-between gap-8">
+                        <div>
+                            <h2 class="font-display text-4xl font-extrabold tracking-tight text-white sm:text-[44px]">
+                                Ready to build something great?</h2>
+                            <p class="mt-3 text-[20px] text-slate-300">Book a free 30-minute strategy call — no
+                                pressure, no sales script.</p>
+                        </div>
+                        <a href="#contact"
+                            class="btn-grad inline-flex items-center gap-2 rounded-lg px-9 py-5 font-display text-[18px] font-bold text-white shadow-glow transition hover:-translate-y-0.5">
+                            Book a Call
+                            <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact" class="bg-[#0b1237] pt-20 text-slate-400">
+        <div class="mx-auto grid max-w-[1320px] gap-12 px-6 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.6fr] lg:px-0">
+            <div>
+                <a href="#home" class="font-display text-2xl font-extrabold text-white">Nexora<span
+                        class="text-brand">.</span></a>
+                <p class="mt-6 max-w-[360px] text-[18px] leading-8">We help ambitious SaaS and tech companies design,
+                    build and scale digital products that customers love.</p>
+                <div class="mt-8 flex gap-3">
+                    <a href="#" aria-label="X"
+                        class="grid h-12 w-12 place-items-center rounded-full bg-white/5 text-white transition hover:bg-brand"><svg
+                            class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M18.2 2h3.4l-7.4 8.5L23 22h-6.8l-5.3-6.9L4.8 22H1.4l7.9-9.1L1 2h7l4.8 6.3L18.2 2Zm-1.2 18h1.9L7 3.9H5L17 20Z" />
+                        </svg></a>
+                    <a href="#" aria-label="LinkedIn"
+                        class="grid h-12 w-12 place-items-center rounded-full bg-white/5 text-white transition hover:bg-brand"><svg
+                            class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.5h4V21H3V9.5Zm7 0h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.1c0-1.2 0-2.8-1.7-2.8s-2 1.3-2 2.700V21h-4V9.5Z" />
+                        </svg></a>
+                    <a href="#" aria-label="Dribbble"
+                        class="grid h-12 w-12 place-items-center rounded-full bg-white/5 text-white transition hover:bg-brand"><svg
+                            class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="9" />
+                            <path d="M5 6c5 2 9 6 11 14M3.500 11c5 .5 11-.5 15-4M9 3c3 3 5 8 5 17" />
+                        </svg></a>
+                    <a href="#" aria-label="Instagram"
+                        class="grid h-12 w-12 place-items-center rounded-full bg-white/5 text-white transition hover:bg-brand"><svg
+                            class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                            <rect x="3" y="3" width="18" height="18" rx="5" />
+                            <circle cx="12" cy="12" r="4" />
+                            <circle cx="17.500" cy="6.500" r="1" fill="currentColor" />
+                        </svg></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-display text-[17px] font-bold uppercase tracking-[0.12em] text-white">Company</h4>
+                <ul class="mt-6 space-y-3 text-[18px]">
+                    <li><a href="#about" class="transition hover:text-white">About Us</a></li>
+                    <li><a href="#services" class="transition hover:text-white">Services</a></li>
+                    <li><a href="#portfolio" class="transition hover:text-white">Portfolio</a></li>
+                    <li><a href="#blog" class="transition hover:text-white">Blog</a></li>
+                    <li><a href="#" class="transition hover:text-white">Careers</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-display text-[17px] font-bold uppercase tracking-[0.12em] text-white">Services</h4>
+                <ul class="mt-6 space-y-3 text-[18px]">
+                    <li><a href="#" class="transition hover:text-white">Product Strategy</a></li>
+                    <li><a href="#" class="transition hover:text-white">UI/UX Design</a></li>
+                    <li><a href="#" class="transition hover:text-white">Web Development</a></li>
+                    <li><a href="#" class="transition hover:text-white">Cloud &amp; DevOps</a></li>
+                    <li><a href="#" class="transition hover:text-white">Growth Marketing</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-display text-[17px] font-bold uppercase tracking-[0.12em] text-white">Stay in the loop
+                </h4>
+                <p class="mt-6 text-[18px] leading-8">Get product updates and insights from our team, once a month.</p>
+                <form class="mt-6 flex gap-3" onsubmit="event.preventDefault(); this.reset();">
+                    <input type="email" required placeholder="Your email"
+                        class="h-16 min-w-0 flex-1 rounded-xl border border-white/10 bg-white/5 px-5 text-white placeholder-slate-500 outline-none focus:border-brand" />
+                    <button
+                        class="btn-grad grid h-16 w-24 place-items-center rounded-xl text-white shadow-glow transition hover:-translate-y-0.5"
+                        aria-label="Subscribe">
+                        <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="m21 3-9.500 18-2.500-7.500L1.500 11 21 3Zm-11.500 10.500L21 3" />
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div
+            class="mx-auto mt-16 flex max-w-[1320px] flex-wrap items-center justify-between gap-4 border-t border-white/10 px-6 py-8 text-[17px] lg:px-0">
+            <p>© 2026 Nexora. All rights reserved.</p>
+            <div class="flex gap-8">
+                <a href="#" class="transition hover:text-white">Privacy Policy</a>
+                <a href="#" class="transition hover:text-white">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
